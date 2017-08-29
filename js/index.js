@@ -190,18 +190,9 @@ for(var i = 0; i<img_left_nav_li.length; i++){
 		img_left_nav_li[num].style.background = '#FFFFFF';
 		img_nav_li_list_p[num].style.color = '#2DBB55';
 	}
-
-		document.addEventListener('click',function(){
-			for(var i=0;i<img_left_nav_list1.length;i++){
-						img_left_nav_list1[i].style.display='none';
-					}
-		},true)
-
-	
-	
 	var body = document.querySelector('body');
 	/* 鼠标点击显示二级导航 */
-	img_left_nav_li[i].addEventListener('click',function(){
+	img_left_nav_li[i].onclick = function(){
 		img_left_nav.tabIndex = 1;
 		if (this.children[1]) { 	
 //			this.children[1].style.display = 'none';
@@ -228,10 +219,8 @@ for(var i = 0; i<img_left_nav_li.length; i++){
 			img_nav_li_list_p[0].style.color = '#2DBB55';
 			num = this.index;
 		}
-	})
-	
+	}
 }
-
 
 
 function run(){
